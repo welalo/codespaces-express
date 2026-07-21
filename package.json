@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm --prefix frontend-app run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && node index.js",
     "start:prod": "npm run build && node index.js",
     "start:server": "node index.js",
