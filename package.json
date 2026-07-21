@@ -4,7 +4,10 @@
   "description": "Backend para reservas de pistas de pádel con Node.js, Express, MongoDB y JWT",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "build": "npm --prefix frontend-app run build",
+    "start": "npm run build && node index.js",
+    "start:prod": "npm run build && node index.js",
+    "start:server": "node index.js",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "nodemon index.js",
     "dev:frontend": "npm --prefix frontend-app run dev"

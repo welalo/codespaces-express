@@ -26,9 +26,19 @@ npm install
 
 ## Ejecución
 
+### Desarrollo
+
 ```bash
 npm run dev
 ```
+
+### Producción
+
+```bash
+npm start
+```
+
+Esto compila el frontend Angular y levanta el backend Express sirviendo la SPA desde el mismo dominio.
 
 ## Endpoints principales
 
