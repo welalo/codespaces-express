@@ -1,0 +1,147 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.panel {
+  width: min(100%, 980px);
+  background: rgba(15, 23, 42, 0.86);
+  color: #f8fafc;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  padding: 1.25rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+}
+
+.header p {
+  color: #cbd5e1;
+  margin-bottom: 0;
+}
+
+.forms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.card h2,
+.reservations h3,
+.calendar-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.9rem;
+}
+
+.form-control,
+.form-select {
+  margin-bottom: 0.8rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border: none;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.btn-outline-light {
+  border-radius: 0.75rem;
+}
+
+.reservation-controls {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.calendar-column {
+  background: rgba(15, 23, 42, 0.78);
+  border-radius: 0.9rem;
+  padding: 0.8rem;
+}
+
+.slot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.7rem;
+  margin-bottom: 0.4rem;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.slot-free {
+  background: rgba(34, 197, 94, 0.18);
+  color: #dcfce7;
+}
+
+.slot-reserved {
+  background: rgba(248, 113, 113, 0.2);
+  color: #fee2e2;
+}
+
+.reservation-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.6rem;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 0.9rem;
+  padding: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+
+.message {
+  margin-top: 1rem;
+  color: #86efac;
+  font-weight: 600;
+}
+
+@media (max-width: 575.98px) {
+  .app-shell {
+    padding: 0.5rem;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  .reservation-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

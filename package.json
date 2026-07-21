@@ -1,11 +1,24 @@
 {
+  "name": "codespaces-express",
+  "version": "1.0.0",
+  "description": "Backend para reservas de pistas de pádel con Node.js, Express, MongoDB y JWT",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "nodemon index.js",
+    "dev:frontend": "npm --prefix frontend-app run dev"
   },
   "dependencies": {
-    "express": "^4.22.1"
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.22.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.3"
   },
   "devDependencies": {
+    "concurrently": "^9.2.2",
     "nodemon": "^3.1.0"
   }
 }

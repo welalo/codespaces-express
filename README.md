@@ -1,13 +1,44 @@
-# GitHub Codespaces ♥️ Express
+# Backend de reservas de pádel
 
-Welcome to your shiny new Codespace running Express! We've got everything fired up and running for you to explore Express.
+Aplicación Node.js con Express y MongoDB para gestionar:
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+- Registro y login de usuarios
+- Reserva de una de las 3 pistas
+- Cancelación de reserva
+- Persistencia en base de datos MongoDB
+- Credenciales cargadas desde un fichero `.env`
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+## Variables de entorno
 
-To run this application:
+Crea un fichero `.env` con este contenido:
 
+```env
+PORT=3000
+MONGODB_URI=mongodb://127.0.0.1:27017/padel-reservas
+JWT_SECRET=supersecret
 ```
-npm start
+
+## Instalación
+
+```bash
+npm install
 ```
+
+## Ejecución
+
+```bash
+npm run dev
+```
+
+## Endpoints principales
+
+### Auth
+
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+
+### Reservas (requiere JWT)
+
+- `GET /api/reservations`
+- `POST /api/reservations`
+- `PATCH /api/reservations/:id/cancel`
