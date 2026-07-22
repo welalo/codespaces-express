@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "npm --prefix frontend-app run build",
-    "install": "npm i",
+    "build-front:prod": "npm --prefix frontend-app run build:prod",
     "start": "npm run build && node index.js",
-    "start:prod": "npm run build && node index.js",
     "start:server": "node index.js",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "nodemon index.js",
-    "dev:frontend": "npm --prefix frontend-app run dev"
+    "dev:frontend": "npm --prefix frontend-app run dev",
+    "build:prod": "npm ci && npm run build-front:prod"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
