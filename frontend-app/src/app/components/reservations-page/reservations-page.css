@@ -1,0 +1,11 @@
+      .card { background: rgba(30, 41, 59, 0.9); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; padding: 1rem; }
+      .top-actions { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1rem; }
+      .form-control, .form-select { margin-bottom: 0.8rem; }
+      .calendar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; }
+      .calendar-column { background: rgba(15, 23, 42, 0.78); border-radius: 0.9rem; padding: 0.8rem; }
+      .slot-btn { display:flex; justify-content:space-between; align-items:center; gap:0.5rem; border:none; border-radius:0.7rem; margin-bottom:0.4rem; padding:0.6rem; font-size:0.9rem; width: 100%; }
+      .slot-free { background: rgba(34,197,94,0.18); color:#dcfce7; }
+      .slot-reserved { background: rgba(248,113,113,0.2); color:#fee2e2; }
+      .reservation-item { display:flex; flex-wrap:wrap; justify-content:space-between; gap:0.6rem; align-items:center; background: rgba(15, 23, 42, 0.9); border-radius:0.9rem; padding:0.85rem; margin-bottom:0.6rem; }
+      .message { margin-top: 1rem; color: #86efac; font-weight: 600; }
+      @media (max-width: 575.98px) { .top-actions { flex-direction: column; align-items: stretch; } .reservation-item { flex-direction: column; align-items: stretch; } }
